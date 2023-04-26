@@ -41,7 +41,7 @@ jobs:
       uses: bsord/helm-push@v4.1.0
       with:
         useOCIRegistry: true
-        registry-url:  oci://ghcr.io/${{ github.actor }}
+        registry-url:  oci://ghcr.io/${{ github.actor }}/chart
         username: ${{ github.actor }}
         access-token: ${{ secrets.GITHUB_TOKEN }}
         force: true

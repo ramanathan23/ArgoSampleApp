@@ -34,14 +34,14 @@ jobs:
 
     - name: Build & Push Docker image to registry
       run: |
-       docker build . --tag ghcr.io/ramanathan23/todolistapi:latest
-       docker push ghcr.io/ramanathan23/todolistapi:latest
+       docker build . --tag ghcr.io/ramanathan23/${{ github.repository }}/todolistapi:latest
+       docker push ghcr.io/ramanathan23/${{ github.repository }}/todolistapi:latest
 
     - name: Helm Push
       uses: bsord/helm-push@v4.1.0
       with:
         useOCIRegistry: true
-        registry-url:  oci://ghcr.io/ramanathan23/todolistapi
+        registry-url:  oci://ghcr.io/ramanathan23/${{ github.repository }}
         username: ${{ github.actor }}
         access-token: ${{ secrets.GITHUB_TOKEN }}
         force: true

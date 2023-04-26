@@ -18,6 +18,5 @@ jobs:
     - name: Build & Push Docker image to registry
       run: |
        docker build . --tag ghcr.io/ramanathan23/todolistapi:latest
-       docker run ghcr.io/ramanathan23/todolistapi:latest
        docker push ghcr.io/ramanathan23/todolistapi:latest
  

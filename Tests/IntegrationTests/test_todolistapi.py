@@ -2,7 +2,7 @@ import json
 import requests
 
 
-baseUrl = "http://localhost:8000"
+baseUrl = "http://todolistapi.apps:8000"
 
 def test_post_todo():
     path = "/todo"

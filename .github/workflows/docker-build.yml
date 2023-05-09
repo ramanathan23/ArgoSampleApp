@@ -37,6 +37,11 @@ jobs:
        docker build . --tag ghcr.io/${{ github.actor }}/todolistapi:latest
        docker push ghcr.io/${{ github.actor }}/todolistapi:latest
 
+    - name: Build & Push Docker QA images to registry
+      run: |
+       docker build . --tag ghcr.io/${{ github.actor }}/todolistapi-functionaltests:latest
+       docker push ghcr.io/${{ github.actor }}/todolistapi-functionaltests:latest
+
     - name: Helm Push
       uses: bsord/helm-push@v4.1.0
       with:

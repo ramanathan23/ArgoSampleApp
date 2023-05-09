@@ -1,1 +1,2 @@
-python -m pytest .
+echo ls
+python -m pytest /

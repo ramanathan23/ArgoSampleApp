@@ -39,7 +39,7 @@ jobs:
 
     - name: Build & Push Docker QA images to registry
       run: |
-       docker build . --tag ghcr.io/${{ github.actor }}/todolistapi-functionaltests:latest
+       docker build ./Tests/IntegrationTests/ --tag ghcr.io/${{ github.actor }}/todolistapi-functionaltests:latest
        docker push ghcr.io/${{ github.actor }}/todolistapi-functionaltests:latest
 
     - name: Helm Push

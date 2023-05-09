@@ -9,9 +9,16 @@ spec:
   ttlSecondsAfterFinished: 100
   template:
     spec:
+      volumes:
+        - name: functionaltests-storage
+          persistentVolumeClaim:
+            claimName: test-results-storage-claim
       containers:
         - name: todoapi-functionaltests
           image: ghcr.io/ramanathan23/todolistapi-functionaltests:latest
           imagePullPolicy: Always
+          volumeMounts:
+            - mountPath: "/app/testresults/"
+                name: functionaltests-storage
       restartPolicy: Never
   backoffLimit: 1

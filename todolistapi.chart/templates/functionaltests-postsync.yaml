@@ -19,6 +19,6 @@ spec:
           imagePullPolicy: Always
           volumeMounts:
             - mountPath: "/app/testresults/"
-                name: functionaltests-storage
+              name: functionaltests-storage
       restartPolicy: Never
   backoffLimit: 1

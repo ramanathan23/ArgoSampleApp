@@ -10,7 +10,7 @@ spec:
   template:
     spec:
       containers:
-        - name: todoapi_functionaltests
+        - name: todoapi-functionaltests
           image: ghcr.io/ramanathan23/todolistapi-functionaltests:latest
           imagePullPolicy: Always
       restartPolicy: Never
